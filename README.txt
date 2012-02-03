@@ -11,6 +11,9 @@ Arrows are drawn on html5 canvas elements.
 
 == Links
 
+* Demo
+  * {HTML5 Canvas Arrow}[http://lislis.sakura.ne.jp/canvas/arrowmark/arrowmark03.html]
+
 * author's blog(written in Japanese)
   * {りす穴さくら}[http://lislis.sblo.jp/]
 
