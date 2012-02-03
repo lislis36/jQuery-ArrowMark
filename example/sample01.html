@@ -1,0 +1,75 @@
+﻿<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>HTML5 Canvas Arrow</title>
+    <link rel="stylesheet" href="./sample.css" type="text/css">
+    <script type="text/javascript" src="./jquery-1.7.1.min.js"></script>
+    <script type="text/javascript" src="../arrowmark.js"></script>
+    <script type="text/javascript">
+        $(function(){
+            $("a.arrow_n").arrowMarkByLink({
+                fillColor: "#ff0000",
+                clipMargin: 5,
+                zIndex: 4,
+                monitor: false
+            });
+
+            $("a.arrow_m").arrowMarkByLink({
+                fillColor: "#0000ff",
+                clipMargin: 10,
+                zIndex: 20,
+                strokeColor: "#ffffff",
+                lineWidth: 5,
+                barWidth: 9,
+                arrowWidth: 30,
+                arrowLength: 40,
+                monitor: true
+            });
+            
+
+            $("div.box").toggle(
+                function(){
+                    $(this).getArrowMark().hide();
+                },
+                function(){
+                    $(this).getArrowMark().show();
+                }
+            );
+        });
+    </script>
+</head>
+<body>
+    <div id="flow">
+        <div id="a" class="box">
+            <a name="a" href="#b" class="arrow_n"></a>
+            Andy
+        </div>
+        <div id="b" class="box">
+            <a name="b" href="#c" class="arrow_n"></a>
+            Becky
+        </div>
+        <div id="c" class="box">
+            <a name="c" href="#a" class="arrow_n"></a>
+            Cath
+        </div>
+        <div id="d" class="box">
+            <a name="d" href="#c" class="arrow_n"></a>
+            <a href="#b" class="arrow_n"></a>
+            Dug
+        </div>
+    </div>
+    <div class="scroll">
+        <div class="scroll_inner">
+            <div id="e" class="box">
+                <a name="e" href="#d" class="arrow_m"></a>
+                Elly
+            </div>
+            <div id="f" class="box">
+                <a name="f" href="#b" class="arrow_m"></a>
+                Fred
+            </div>
+        </div>
+    </div>
+</body>
+</html>
